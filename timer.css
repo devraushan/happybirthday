@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    background-color: pink;
+}
+#clockdiv{
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    height: 500px;
+    font-size: large;
+    width: 700px;
+    background-image: url('images/birthday_background.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding: 2px;
+    border-radius: 5px;
+    border: solid orange;
+    
+    
+}
+.daybox , .hourbox , .minutebox, .secondbox {
+    margin:auto;
+    
+    padding: 20px;
+    border: solid 2px palevioletred;
+    background-color: rgba(216, 112, 147, 0.356);
+    border-radius: 4px;
+    
+    text-align: center;
+}
+.daybox{
+    color: blue;
+}
+.hourbox{
+    color: yellow;
+}
+.minutebox{
+    color:  #800080;
+}
+.secondbox{
+    color: chocolate;
+}
+span{
+    background-color: transparent;
+    
+}
