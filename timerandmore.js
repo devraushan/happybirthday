@@ -13,7 +13,7 @@ function getTimeRemaining(endtime){
         seconds
     };
 }
-const deadlinee = 'March 29 2022 16:55:15';
+
 function initializeClock(id,endtime){
     const clock = document.getElementById(id);
     const daysSpan = clock.querySelector(".days");
@@ -71,4 +71,4 @@ function initializeClock(id,endtime){
     
 }
 
-initializeClock('clockdiv',deadlinee);
+initializeClock('clockdiv',deadline);
