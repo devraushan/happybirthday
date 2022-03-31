@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="finalstyle.css">
+</head>
+<body class="body1">
+    <div id="page1">
+        <div></div>
+        <img class="image1" src="images/birthdaygif1.gif" alt="">
+        <div class="forwardbtn"><button onclick="forwardpage('page1')">Next</button></div>
+    </div>
+    <div id="page2">
+        <div class="backbutton"><button onclick="backwardpage('page2')">Back</button></div>
+        This is page 2
+        <div class="forwardbtn"><button onclick="forwardpage('page2')">Next</button></div>
+    </div>
+    <div id="page3">
+        <div class="backbutton"><button onclick="backwardpage('page3')">Back</button></div>
+        this is page 3
+        <div class="forwardbtn"><button onclick="forwardpage('page3')">Next</button></div>
+
+    </div>
+    <div id="page4">
+        <div class="backbutton"><button onclick="backwardpage('page4')">Back</button></div>
+        This is page 4
+        <div class="forwardbtn"><button onclick="forwardpage('page4')">Next</button></div>
+    </div>
+    <div id="page5">
+        <div class="backbutton"><button onclick="backwardpage('page5')">Back</button></div>
+        This is page 5
+        <div></div>
+    </div>
+    <script>
+
+            const pg1 = document.getElementById('page1');
+            const pg2 = document.getElementById('page2');
+            const pg3 = document.getElementById('page3');
+            const pg4 = document.getElementById('page4');
+            const pg5 = document.getElementById('page5');
+
+            pg2.style.display = 'none';
+            pg3.style.display = 'none';
+            pg4.style.display = 'none';
+            pg5.style.display = 'none';
+
+
+        function forwardpage(id){
+            var fwdbtn = document.getElementById(id);
+
+            
+            pg1.style.display = 'none';
+            pg2.style.display = 'none';
+            pg3.style.display = 'none';
+            pg4.style.display = 'none';
+            pg5.style.display = 'none';
+
+            switch(fwdbtn){
+                case pg1 : 
+                    pg2.style.display = 'flex';
+                    break;
+                case pg2 : 
+                    pg3.style.display = 'flex';
+                    break;
+                case pg3:
+                    pg4.style.display = 'flex';
+                    break;
+                case pg4:
+                    pg5.style.display = 'flex';
+                default: break;
+            }
+
+        }
+
+        function backwardpage(id){
+            var bkbtn = document.getElementById(id);
+
+            pg1.style.display = 'none';
+            pg2.style.display = 'none';
+            pg3.style.display = 'none';
+            pg4.style.display = 'none';
+            pg5.style.display = 'none';
+
+            switch(bkbtn){
+                case pg5 :
+                    pg4.style.display = 'flex';
+                    break;
+                case pg4 :
+                    pg3.style.display = 'flex';
+                    break;
+                case pg3 :
+                    pg2.style.display = 'flex';
+                    break;
+                case pg2 :
+                    pg1.style.display = 'flex';
+                    break;
+                default: break;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

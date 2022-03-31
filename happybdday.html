@@ -4,9 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
+    <style>
+        html{
+            width: 100%;
+            margin: 0;
+            height: 100vh;
+            background-color: pink;
+            background-image: url('images/widebackground.jpeg');
+            background-size: contain;
+        }
+        .videoshowcase{ 
+            width: 100%;
+            
+        }
+        .video{
+            position: absolute;
+            top: 2px;
+            left: 27%;
+             }
+        #vid1{
+            opacity: 0.5;
+        }
+        #instruction{
+            
+            float: left;
+            overflow:auto;
+            z-index: 9;
+            font-size: 40px;
+            margin: 20% 36%;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgb(226, 8, 8);
+            -webkit-text-fill-color: aliceblue;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: white;
+        }
+        .nextpage{
+            background-color: aliceblue;
+            padding: 3px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            right: 20px;
+            position: absolute;
+            bottom: 20px;
+        }
+    </style>
+    <title>Happy birthday To You</title>
 </head>
 <body>
-    <h2>Hjofldshflkjsh</h2>
+    <section class="videoshwcase">
+        <div class="videocont">
+             <div class="video"> 
+                 <video src="Videos/birthdaywelcome.mp4"  height="630" autoplay muted id="vid1"></video>
+            </div> 
+            <div id="instruction">Press Enter to Unmute </div>
+            <a href="happybdday2.html" class="nextpage">Next</a>
+        </div>
+    </section>
+    <script>
+        const video = document.getElementById('vid1');
+        
+
+
+        function unmutevideo(event){
+            if(event.keyCode == 13){
+                if(video.muted == true){
+                video.muted = false;
+                video.style.opacity = '1';
+                }
+                else{
+                    video.muted = true;
+                }
+            }
+        }
+    
+        document.addEventListener('keydown', e =>{
+            unmutevideo(e);
+        });
+
+
+    </script>
 </body>
 </html>

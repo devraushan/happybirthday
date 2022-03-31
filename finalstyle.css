@@ -1,0 +1,14 @@
+#page1,#page2,#page3,#page4,#page5{
+    display: flex;
+    background-color: black;
+    height: 90vh;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+}
+.forwardbtn{
+    align-self: flex-end;
+}
+.backbutton{
+    align-self:flex-end;
+}
