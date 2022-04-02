@@ -13,7 +13,7 @@ function getTimeRemaining(endtime){
         seconds
     };
 }
-const deadlinee = 'April 1 2022 19:35:59 GMT+530';
+
 function initializeClock(id,endtime){
     const clock = document.getElementById(id);
     const daysSpan = clock.querySelector(".days");
@@ -71,4 +71,4 @@ function initializeClock(id,endtime){
     
 }
 
-initializeClock('clockdiv',deadlinee);
+initializeClock('clockdiv',deadline);
