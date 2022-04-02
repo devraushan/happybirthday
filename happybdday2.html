@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+        </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        </style>
     <link rel="stylesheet" href="finalstyle.css">
 </head>
 <body class="body1">
@@ -15,37 +21,48 @@
     </div>
     <div id="page2">
         <div class="backbutton"><button onclick="backwardpage('page2')">Back</button></div>
-        This is page 2
+        <div class="page21"><p class="pg2fnt">Khusbu jii...! <br>Happy Birthday.. <br>Kitna mst day h na aaj aapki jab sun ke around ek aur revolution poori kr chuke... <br>Bht khash din h aaj... Aakhir birthday bhi to apni jaan ka h &#128526 <br> Chl ab chupchap birthday party de de meko... <br>Ab tu soch rahi ki party m kya du and usse bhi important ki kese du.... <br> h na... <br>Chl btata hu... <br>Last page pr jab jana to kuch hoga usko dekh ke hasi aaye ya na aaye bs achi si katil wali smile de dena.. <br>Bs ho gyi party.... <br>Itne se nahi manunga... dance kr... gane gaa and birthday wali moment bhej dena yadi celebrate ki to... <br>And after all mera birthday gift... <br>Apna khyal rkha kr ese ki tu meri care kr rhi... isse bdi koi gift na ho skti baba alag baat h kabhi kabhi gussa ho jata bt fir bhi tu yadi happy rah to meko sukoon milta h... <br> <br> Bhootu &#128123 <br>BHOOTU THE PROGRAMMER</p></div> 
         <div class="forwardbtn"><button onclick="forwardpage('page2')">Next</button></div>
     </div>
     <div id="page3">
         <div class="backbutton"><button onclick="backwardpage('page3')">Back</button></div>
-        this is page 3
+        <div class="page31"><video src="Videos/Video1badawala.mp4" controls poster="images/click-here.jpg" width="100%" height="100%"></video></div> 
         <div class="forwardbtn"><button onclick="forwardpage('page3')">Next</button></div>
 
     </div>
     <div id="page4">
         <div class="backbutton"><button onclick="backwardpage('page4')">Back</button></div>
-        This is page 4
+        <video src="Videos/Video2chotawala.mp4" controls></video>
         <div class="forwardbtn"><button onclick="forwardpage('page4')">Next</button></div>
     </div>
     <div id="page5">
         <div class="backbutton"><button onclick="backwardpage('page5')">Back</button></div>
-        This is page 5
-        <div></div>
+        <img src="images/loveyou.jpg" alt="LOVE YOU" >
+        <div class="forwardbtn"><button onclick="forwardpage('page5')">Next</button></div>
+    </div>
+    <div id="page6">
+        <div class="backbutton"><button onclick="backwardpage('page6')">Back</button></div>
+        <div class="page61"><p class="joke">मेरे प्यारे जीवनसाथी मेरा प्रणाम, आपके चरणों में।
+            आप ने अभी तक चिट्टी नहीं लिखी मेरी सहेली को। नौकरी मिल गई है हमारी गाय को। बछडा दिया है दादाजी ने। शराब की लत लगाली है मैंने। तुमको बहुत खत लिखे पर तुम नहीं आए कुत्ते के बच्चे। भेड़िया खा गया दो महीने का राशन। छुट्टी पर आते समय ले आना एक खूबसूरत औरत। मेरी सहेली बन गई है और इस समय टीवी पर गाना गा रही है हमारी बकरी। बेच दी गई है तुम्हारी मां।
+            तुमको बहुत याद कर रही है एक पड़ोसन। हमें बहुत तंग करती है।
+            - तुम्हारी चंदा-चकौरी
+            परिणाम : पति का हार्ट फेल। एक पूर्ण विराम ने उसके जीवन पर ही विराम लगा दिया।</p></div>
     </div>
     <script>
 
+            const page = document.getRootNode
             const pg1 = document.getElementById('page1');
             const pg2 = document.getElementById('page2');
             const pg3 = document.getElementById('page3');
             const pg4 = document.getElementById('page4');
             const pg5 = document.getElementById('page5');
+            const pg6 = document.getElementById('page6');
 
             pg2.style.display = 'none';
             pg3.style.display = 'none';
             pg4.style.display = 'none';
             pg5.style.display = 'none';
+            pg6.style.display = 'none';
 
 
         function forwardpage(id){
@@ -57,19 +74,29 @@
             pg3.style.display = 'none';
             pg4.style.display = 'none';
             pg5.style.display = 'none';
+            pg6.style.display = 'none';
 
             switch(fwdbtn){
                 case pg1 : 
                     pg2.style.display = 'flex';
+                    document.body.style.backgroundColor = '#AA336A';
                     break;
                 case pg2 : 
                     pg3.style.display = 'flex';
+                    document.body.style.backgroundColor = '#FFA500';
                     break;
                 case pg3:
                     pg4.style.display = 'flex';
+                    document.body.style.backgroundColor = "green";
                     break;
                 case pg4:
                     pg5.style.display = 'flex';
+                    document.body.style.backgroundColor = 'blue';
+                    break;
+                case pg5:
+                    pg6.style.display = 'flex';
+                    document.body.style.backgroundColor = 'silver';
+                    break;
                 default: break;
             }
 
@@ -83,19 +110,28 @@
             pg3.style.display = 'none';
             pg4.style.display = 'none';
             pg5.style.display = 'none';
+            pg6.style.display = 'none';
 
-            switch(bkbtn){
+            switch(bkbtn){ 
+                case pg6 :
+                    pg5.style.display = 'flex';
+                    document.body.style.backgroundColor = 'blue';
+                    break;
                 case pg5 :
                     pg4.style.display = 'flex';
+                    document.body.style.backgroundColor = "green";
                     break;
                 case pg4 :
                     pg3.style.display = 'flex';
+                    document.body.style.backgroundColor = '#FFA500';
                     break;
                 case pg3 :
                     pg2.style.display = 'flex';
+                    document.body.style.backgroundColor = '#AA336A';
                     break;
                 case pg2 :
                     pg1.style.display = 'flex';
+                    document.body.style.backgroundColor = 'black';
                     break;
                 default: break;
             }

@@ -1,7 +1,24 @@
-#page1,#page2,#page3,#page4,#page5{
-    display: flex;
+html{
     background-color: black;
-    height: 90vh;
+}
+body{
+    margin: 0;
+    
+}
+.page21{
+    border: solid green 2px;
+    padding: 20px;
+    width: 80%;
+}
+.pg2fnt{
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    align-self: center;
+    
+}
+#page1,#page2,#page3,#page4,#page5,#page6{
+    display: flex;
+    height: 93vh;
     justify-content: space-between;
     padding: 20px;
     color: white;
@@ -11,4 +28,9 @@
 }
 .backbutton{
     align-self:flex-end;
+}
+.joke{
+    font-family: 'Kalam', cursive;
+    font-size: 40px;
+    color: blue;
 }
